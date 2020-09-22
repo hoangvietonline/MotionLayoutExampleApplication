@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.motionlayoutexampleapplication.CollapsibleToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="false"
+    android:minHeight="?attr/actionBarSize"
+    app:layoutDescription="@xml/scene_actionbar"
+    app:layout_scrollFlags="scroll|snap|enterAlways|exitUntilCollapsed">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null"
+        android:src="@mipmap/img_dog" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/golden_dog"
+        android:textColor="#FFF"
+        android:textSize="32sp"
+        android:transformPivotX="0dp"
+        android:transformPivotY="0dp"
+        />
+    <TextView
+        android:id="@+id/subLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hoangviet"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        />
+</com.example.motionlayoutexampleapplication.CollapsibleToolbar>
