@@ -5,88 +5,135 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@+id/start"
-        motion:duration="3000"
-        motion:motionInterpolator="linear">
-        <OnSwipe
-            motion:dragDirection="dragRight"
-            motion:touchAnchorId="@id/button"
-            motion:touchAnchorSide="right" />
-        <OnClick motion:targetId="@+id/button"
-            motion:clickAction="toggle"
-            />
+        motion:duration="1000">
+        <!--        <OnSwipe-->
+        <!--            motion:dragDirection="dragRight"-->
+        <!--            motion:touchAnchorId="@id/button"-->
+        <!--            motion:touchAnchorSide="right" />-->
         <KeyFrameSet>
-            <KeyPosition
-                motion:keyPositionType="pathRelative"
-                motion:percentX="0.1"
-                motion:percentY="-0.3"
-                motion:framePosition="10"
-                motion:motionTarget="@id/button"/>
-            <KeyPosition
-                motion:keyPositionType="pathRelative"
-                motion:percentY="0.9"
-                motion:percentX="0.25"
-                motion:framePosition="30"
-                motion:motionTarget="@id/button"/>
-            <KeyPosition
-                motion:keyPositionType="pathRelative"
-                motion:percentX="0.4"
-                motion:percentY="-0.4"
-                motion:framePosition="50"
-                motion:pathMotionArc="flip"
-                motion:motionTarget="@id/button"/>
-            <KeyPosition
-                motion:keyPositionType="pathRelative"
-                motion:percentX="0.5"
-                motion:percentY="0.9"
-                motion:pathMotionArc="flip"
-                motion:framePosition="65"
-                motion:motionTarget="@id/button"/>
+            <!--            <KeyPosition-->
+            <!--                motion:keyPositionType="pathRelative"-->
+            <!--                motion:percentX="0.1"-->
+            <!--                motion:percentY="-0.3"-->
+            <!--                motion:framePosition="10"-->
+            <!--                motion:motionTarget="@id/button"/>-->
+            <!--            <KeyPosition-->
+            <!--                motion:keyPositionType="pathRelative"-->
+            <!--                motion:percentY="0.9"-->
+            <!--                motion:percentX="0.25"-->
+            <!--                motion:framePosition="30"-->
+            <!--                motion:motionTarget="@id/button"/>-->
+            <!--            <KeyPosition-->
+            <!--                motion:keyPositionType="pathRelative"-->
+            <!--                motion:percentX="0.4"-->
+            <!--                motion:percentY="-0.4"-->
+            <!--                motion:framePosition="50"-->
+            <!--                motion:pathMotionArc="flip"-->
+            <!--                motion:motionTarget="@id/button"/>-->
+            <!--            <KeyPosition-->
+            <!--                motion:keyPositionType="pathRelative"-->
+            <!--                motion:percentX="0.5"-->
+            <!--                motion:percentY="0.9"-->
+            <!--                motion:pathMotionArc="flip"-->
+            <!--                motion:framePosition="65"-->
+            <!--                motion:motionTarget="@id/button"/>-->
 
+            <!--            <KeyPosition-->
+            <!--                motion:keyPositionType="pathRelative"-->
+            <!--                motion:percentX="0.7"-->
+            <!--                motion:percentY="-0.3"-->
+            <!--                motion:framePosition="85"-->
+            <!--                motion:motionTarget="@id/button"/>-->
+            <!--            <KeyPosition-->
+            <!--                motion:curveFit="spline"-->
+            <!--                motion:framePosition="30"-->
+            <!--                motion:keyPositionType="parentRelative"-->
+            <!--                motion:motionTarget="@id/button"-->
+            <!--                motion:percentX="0.65"-->
+            <!--                motion:percentY="0.6"-->
+            <!--                motion:transitionEasing="linear" />-->
             <KeyPosition
+                motion:framePosition="50"
                 motion:keyPositionType="pathRelative"
-                motion:percentX="0.7"
-                motion:percentY="-0.3"
-                motion:framePosition="85"
-                motion:motionTarget="@id/button"/>
+                motion:motionTarget="@+id/button"
+                motion:percentX="0.491"
+                motion:percentY="-0.215" />
+            <KeyCycle
+                motion:motionTarget="@+id/button"
+                motion:framePosition="30"
+                motion:wavePeriod="1"
+                android:alpha="0.5"
+                motion:waveOffset="1"
+                android:rotation="45"
+                motion:transitionEasing="linear"
+                android:elevation="@android:dimen/thumbnail_width"
+                android:scaleX="0.1"
+                android:scaleY="0.6" />
+            <KeyTimeCycle
+                motion:motionTarget="@+id/button"
+                motion:framePosition="0"
+                motion:wavePeriod="1"
+                android:alpha="0.5"
+                motion:waveOffset="0.5"
+                motion:waveShape="reverseSawtooth" />
+            <!--            <KeyPosition-->
+            <!--                motion:framePosition="60"-->
+            <!--                motion:keyPositionType="parentRelative"-->
+            <!--                motion:motionTarget="@id/button"-->
+            <!--                motion:percentX="1"-->
+            <!--                motion:percentY="1" />-->
+            <!--            <KeyPosition-->
+            <!--                motion:framePosition="99"-->
+            <!--                motion:keyPositionType="parentRelative"-->
+            <!--                motion:motionTarget="@id/button"-->
+            <!--                motion:percentX="0.15"-->
+            <!--                motion:percentY="0.1" />-->
         </KeyFrameSet>
+        <OnClick motion:targetId="@id/button"
+            motion:clickAction="transitionToEnd" />
         <!--        <KeyFrameSet>-->
-<!--            <KeyAttribute-->
-<!--                android:rotation="-45"-->
-<!--                android:scaleX="2"-->
-<!--                android:scaleY="2"-->
-<!--                motion:framePosition="50"-->
-<!--                motion:motionTarget="@id/button" />-->
-<!--            <KeyCycle-->
-<!--                android:translationY="50dp"-->
-<!--                motion:framePosition="100"-->
-<!--                motion:motionTarget="@id/button"-->
-<!--                motion:waveOffset="0"-->
-<!--                motion:wavePeriod="0"-->
-<!--                motion:waveShape="sin" />-->
-<!--            <KeyCycle-->
-<!--                android:translationY="50dp"-->
-<!--                motion:framePosition="50"-->
-<!--                motion:motionTarget="@id/button"-->
-<!--                motion:waveOffset="0"-->
-<!--                motion:wavePeriod="1"-->
-<!--                motion:waveShape="sin" />-->
-<!--            <KeyCycle-->
-<!--                android:translationY="50dp"-->
-<!--                motion:framePosition="0"-->
-<!--                motion:motionTarget="@id/button"-->
-<!--                motion:waveOffset="0"-->
-<!--                motion:wavePeriod="0"-->
-<!--                motion:waveShape="sin" />-->
-<!--        </KeyFrameSet>-->
+        <!--            <KeyAttribute-->
+        <!--                android:rotation="-45"-->
+        <!--                android:scaleX="2"-->
+        <!--                android:scaleY="2"-->
+        <!--                motion:framePosition="50"-->
+        <!--                motion:motionTarget="@id/button" />-->
+        <!--            <KeyCycle-->
+        <!--                android:translationY="50dp"-->
+        <!--                motion:framePosition="100"-->
+        <!--                motion:motionTarget="@id/button"-->
+        <!--                motion:waveOffset="0"-->
+        <!--                motion:wavePeriod="0"-->
+        <!--                motion:waveShape="sin" />-->
+        <!--            <KeyCycle-->
+        <!--                android:translationY="50dp"-->
+        <!--                motion:framePosition="50"-->
+        <!--                motion:motionTarget="@id/button"-->
+        <!--                motion:waveOffset="0"-->
+        <!--                motion:wavePeriod="1"-->
+        <!--                motion:waveShape="sin" />-->
+        <!--            <KeyCycle-->
+        <!--                android:translationY="50dp"-->
+        <!--                motion:framePosition="0"-->
+        <!--                motion:motionTarget="@id/button"-->
+        <!--                motion:waveOffset="0"-->
+        <!--                motion:wavePeriod="0"-->
+        <!--                motion:waveShape="sin" />-->
+        <!--        </KeyFrameSet>-->
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
-        <Constraint android:id="@id/button">
+        <Constraint android:id="@id/button"
+            android:layout_height="64dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="64dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp">
             <Layout
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_marginStart="8dp"
-                motion:layout_constraintBottom_toBottomOf="parent"
                 motion:layout_constraintStart_toStartOf="parent"
                 motion:layout_constraintTop_toTopOf="parent" />
             <CustomAttribute
@@ -105,12 +152,39 @@
                 android:layout_height="64dp"
                 android:layout_marginEnd="8dp"
                 motion:layout_constraintBottom_toBottomOf="parent"
-                motion:layout_constraintEnd_toEndOf="parent"
-                motion:layout_constraintTop_toTopOf="parent" />
+                motion:layout_constraintEnd_toEndOf="parent" />
             <CustomAttribute
                 motion:attributeName="backgroundColor"
                 motion:customColorValue="#E91E63" />
         </Constraint>
     </ConstraintSet>
-
+    <Transition
+        motion:constraintSetEnd="@+id/start"
+        motion:constraintSetStart="@+id/end"
+        motion:duration="1000">
+        <KeyFrameSet>
+            <KeyPosition
+                motion:framePosition="50"
+                motion:keyPositionType="pathRelative"
+                motion:motionTarget="@+id/button"
+                motion:percentX="0.534"
+                motion:percentY="-0.179" />
+            <KeyAttribute
+                motion:motionTarget="@+id/button"
+                motion:framePosition="100"
+                android:alpha="0.4"
+                android:rotation="45" />
+            <KeyAttribute
+                motion:motionTarget="@+id/button"
+                motion:framePosition="0"
+                android:alpha="0.5" />
+            <KeyAttribute
+                motion:motionTarget="@+id/button"
+                motion:framePosition="50"
+                android:alpha="1" />
+        </KeyFrameSet>
+        <OnClick
+            motion:clickAction="transitionToEnd"
+            motion:targetId="@+id/button" />
+    </Transition>
 </MotionScene>

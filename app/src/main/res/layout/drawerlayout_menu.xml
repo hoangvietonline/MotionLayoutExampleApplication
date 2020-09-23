@@ -8,14 +8,14 @@
     android:layout_height="match_parent"
     android:layout_gravity="start"
     app:layoutDescription="@xml/scene_drawer_menu"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorPrimary">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Monterey"
+        android:text="Golden Dog"
         android:textSize="20sp"
         android:textStyle="italic"
         android:typeface="serif"
@@ -72,10 +72,10 @@
 
     <View
         android:id="@+id/view"
-        android:background="#c2c1c1"
         android:layout_width="100dp"
         android:layout_height="1dp"
         android:layout_marginTop="16dp"
+        android:background="#c2c1c1"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -86,7 +86,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="California"
+        android:text="hoangviet"
         android:textColor="#FFF"
         app:fontFamily="cursive"
         app:layout_constraintBottom_toTopOf="@+id/view"
